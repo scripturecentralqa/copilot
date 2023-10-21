@@ -1,9 +1,9 @@
-# The manifest for the "scripturecentralqa" service.
+# The manifest for the "scqa" service.
 # Read the full specification for the "Load Balanced Web Service" type at:
 #  https://aws.github.io/copilot-cli/docs/manifest/lb-web-service/
 
 # Your service name will be used in naming your resources like log groups, ECS services, etc.
-name: scripturecentralqa
+name: scqa
 type: Load Balanced Web Service
 
 # Distribute traffic to your service.
@@ -50,11 +50,12 @@ sidecars:
 # Optional fields for more advanced use-cases.
 #
 variables:                    # Pass environment variables as key value pairs.
-  METRIC_NAMESPACE: server_prod
+  METRIC_NAMESPACE: scqa_server_prod
 
 secrets: # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
   OPENAI_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/OPENAI_KEY
   PINECONE_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_KEY
+  PINECONE_ENV: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_ENV
 # You can override any of the values defined above by environment.
 #environments:
 #  test:

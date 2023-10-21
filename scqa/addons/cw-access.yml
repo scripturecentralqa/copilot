@@ -2,13 +2,13 @@
 Parameters:
   App:
     Type: String
-    Description: scripturecentralqa
+    Description: scqa
   Env:
     Type: String
     Description: prod
   Name:
     Type: String
-    Description: scripturecentralqa
+    Description: scqa
 
 Resources:
   CWAccessPolicy:
