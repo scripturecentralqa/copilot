@@ -2,13 +2,13 @@
 Parameters:
   App:
     Type: String
-    Description: iloveconference
+    Description: scripturecentralqa
   Env:
     Type: String
     Description: prod
   Name:
     Type: String
-    Description: client-server
+    Description: scripturecentralqa
 
 Resources:
   CWAccessPolicy:
