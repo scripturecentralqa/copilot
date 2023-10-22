@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/scqa-server:d16ea96f33214550f1295d85a7394417308f6920
+  location: public.ecr.aws/g7f5o4m9/scqa-server:162c9cec6caa5562de598927830e847fa0934937
   # Port exposed through your container to route traffic to it.
   port: 8000
 

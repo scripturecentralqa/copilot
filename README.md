@@ -38,3 +38,4 @@ Update <application name>/manifest.yml with the latest image tags for client and
 
 The run `copilot deploy`
 
+If you need to update a secret, rerun `copilot secret init` with the `--overwrite` parameter.
