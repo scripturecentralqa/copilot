@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/scqa-server:4c63f209a052928224d8f819a846bcb4d1cab344
+  location: public.ecr.aws/g7f5o4m9/scqa-server:73a1423ee6fee3d2814e2199df4058eca31cac5d
   # Port exposed through your container to route traffic to it.
   port: 8000
 
@@ -37,7 +37,7 @@ sidecars:
     image: public.ecr.aws/g7f5o4m9/scqa-nginx:e2b866dd032dae86c15a3100e649a3cb7321123b
   client:
     port: 3000
-    image: public.ecr.aws/g7f5o4m9/scqa-client:0150401d832a54fae421d1948361def07a6479692
+    image: public.ecr.aws/g7f5o4m9/scqa-client:0150401d832a54fae421d1948361def07a647969
     variables:
       SERVER_HOST: http://localhost:8000
     secrets:
