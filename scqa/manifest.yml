@@ -37,7 +37,7 @@ sidecars:
     image: public.ecr.aws/g7f5o4m9/scqa-nginx:e2b866dd032dae86c15a3100e649a3cb7321123b
   client:
     port: 3000
-    image: public.ecr.aws/g7f5o4m9/scqa-client:0807d350ae04a6eef1e54bb8e1e0a0d78fa2f573
+    image: public.ecr.aws/g7f5o4m9/scqa-client:e77340d9629be24cdc603a26944f3666d52eed25
     variables:
       SERVER_HOST: http://localhost:8000
     secrets:
