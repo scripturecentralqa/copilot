@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/scqa-server:4973ac49c6c2500fc6b56ba954f2a48be3892a99
+  location: public.ecr.aws/g7f5o4m9/scqa-server:0043f87f17aecce6f74fd6645336e6dd53834bfc
   # Port exposed through your container to route traffic to it.
   port: 8000
 
@@ -56,6 +56,7 @@ secrets: # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
   OPENAI_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/OPENAI_KEY
   PINECONE_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_KEY
   PINECONE_ENV: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_ENV
+  VOYAGE_API_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/VOYAGE_API_KEY
 # You can override any of the values defined above by environment.
 #environments:
 #  test:
