@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/scqa-server:0043f87f17aecce6f74fd6645336e6dd53834bfc
+  location: public.ecr.aws/g7f5o4m9/scqa-server:9bf736f8de661606f84fddcf18ed506d0bee9b8e
   # Port exposed through your container to route traffic to it.
   port: 8000
 
@@ -53,10 +53,13 @@ variables:                    # Pass environment variables as key value pairs.
   METRIC_NAMESPACE: scqa_server_prod
 
 secrets: # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
-  OPENAI_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/OPENAI_KEY
-  PINECONE_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_KEY
+  OPENAI_API_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/OPENAI_API_KEY
+  PINECONE_API_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_API_KEY
   PINECONE_ENV: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/PINECONE_ENV
+  COHERE_API_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/COHERE_API_KEY
   VOYAGE_API_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/VOYAGE_API_KEY
+  UPSTASH_REDIS_REST_URL: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/UPSTASH_REDIS_REST_URL
+  UPSTASH_REDIS_REST_TOKEN: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/UPSTASH_REDIS_REST_TOKEN
 # You can override any of the values defined above by environment.
 #environments:
 #  test:

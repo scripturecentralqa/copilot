@@ -28,8 +28,8 @@ Run `copilot env deploy --name prod` to create more infrastructure.
 Run `copilot secret init` to add the following secrets
 - UPSTASH\_REDIS\_REST\_URL
 - UPSTASH\_REDIS\_REST\_TOKEN
-- OPENAI\_KEY
-- PINECONE\_KEY
+- OPENAI\_API\_KEY
+- PINECONE\_API\_KEY
 - PINECONE\_ENV
 
 ## Usage
