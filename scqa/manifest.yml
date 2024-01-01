@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/scqa-server:9bf736f8de661606f84fddcf18ed506d0bee9b8e
+  location: public.ecr.aws/x7m9c6r7/scqa-server:6c8aabf52bb1809576bef0e60c79a658ded85971
   # Port exposed through your container to route traffic to it.
   port: 8000
 
@@ -34,12 +34,13 @@ network:
 sidecars:
   nginx:
     port: 80
-    image: public.ecr.aws/g7f5o4m9/scqa-nginx:e2b866dd032dae86c15a3100e649a3cb7321123b
+    image: public.ecr.aws/x7m9c6r7/scqa-nginx:91b4360a2f2e169c238ef510d966dd5e17554379
   client:
     port: 3000
-    image: public.ecr.aws/g7f5o4m9/scqa-client:e77340d9629be24cdc603a26944f3666d52eed25
+    image: public.ecr.aws/x7m9c6r7/scqa-client:ae03de2170feed67266284dae30deee9d147c4f5
     variables:
       SERVER_HOST: http://localhost:8000
+      PUBLIC_SERVER_HOST: https://www.scripturecentralqa.org/api
     secrets:
       UPSTASH_REDIS_REST_URL: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/UPSTASH_REDIS_REST_URL
       UPSTASH_REDIS_REST_TOKEN: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/UPSTASH_REDIS_REST_TOKEN

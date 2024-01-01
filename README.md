@@ -8,7 +8,8 @@ Host your domain in Route53.
 
 Delete .workspace
 
-Run `copilot app init --domain <domain>`. 
+Run `copilot app init --domain <domain>` (without www). 
+Name the application; e.g., scqa
 This creates infrastructure on AWS. 
 
 Run `copilot init`
@@ -19,7 +20,7 @@ Delete the <application name> directory that copilot created for you
 and rename the old application directory to your application name.
 
 Change the application name in <application name>/addons/cw-access.yml.
-Make all of the necessary changes to <application name>/manifest.yml.
+Make all of the necessary changes to <application name>/manifest.yml including updating the ECR locations.
 
 Run `copilot env init` to initialize a `prod` environment
 
@@ -31,6 +32,8 @@ Run `copilot secret init` to add the following secrets
 - OPENAI\_API\_KEY
 - PINECONE\_API\_KEY
 - PINECONE\_ENV
+- VOYAGE\_API\_KEY (not currently used)
+- COHERE\_API\_KEY (not currently used)
 
 ## Usage
 
